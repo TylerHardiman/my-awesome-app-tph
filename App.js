@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 // Simple Hello World Node App
 const APP_PORT = process.env.APP_PORT || 300; app.get('/'), (req, res) => {
-    res.send('Hello World')
+    res.send('Hello to Tyler Hardiman and the rest of the world out there!')
     
 };
 
