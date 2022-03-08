@@ -1,3 +1,5 @@
+// The purpose of this project is better understand "Advanced GitHub" in CI/CD
+
 const express = require('express')
 const app = express()
 // Simple Hello World Node App
