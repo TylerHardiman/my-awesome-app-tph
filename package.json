@@ -5,8 +5,11 @@
     "main": "app.js",
     "scripts": {
         "start": "node app.js"
-    }, 
+    },
     "author": "Tyler Hardiman",
     "license": "ISC",
-    "dependencies": {"express": "4.17.1"}}
-  
+    "dependencies": {
+        "express": "4.17.1",
+        "ubuntu": "^2.0.0"
+    }
+}
