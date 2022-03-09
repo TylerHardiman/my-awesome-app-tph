@@ -12,15 +12,3 @@ services:
     volumes:
       - '/app/node_modules'
       - .:/app
-  Single:
-    container_name: frontend
-    restart: always
-  Multi:
-    container_name: server
-    restart: always
-    build:
-      context: server
-      args:
-        NODE_PORT: 3000
-    ports:
-      - 3000:3000
