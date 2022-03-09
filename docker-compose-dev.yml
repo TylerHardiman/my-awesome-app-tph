@@ -11,7 +11,7 @@ services:
     - .:/app
     - '/app/node_modules'
     ports:
-      - '3002:3000'
+      - '3000:3000'
 
   my-awesome-app-tph-test:
     container_name: my-awesome-app-tph
