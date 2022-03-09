@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
 
-  my-awesome-app-tph:
-    container_name: my-awesome-app-tph
+  my-awesome-app-tph_my-awesome-app-tph:
+    container_name: my-awesome-app-tph_my-awesome-app-tph
     build:
       context: ./
       dockerfile: Dockerfile

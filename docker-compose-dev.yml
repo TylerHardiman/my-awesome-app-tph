@@ -2,8 +2,8 @@ version: '3.9'
 
 services:
 
-  my-awesome-app-tph:
-    container_name: my-awesome-app-tph
+  my-awesome-app-tph_my-awesome-app-tph:
+    container_name: my-awesome-app-tph_my-awesome-app-tph
     image: 
     build:
       context: .
@@ -16,7 +16,7 @@ services:
 
   my-awesome-app-tph-test:
     container_name: my-awesome-app-tph-test
-    image: latest
+    image: 
     volumes:
      - .:/app
      - '/app/node_modules'
