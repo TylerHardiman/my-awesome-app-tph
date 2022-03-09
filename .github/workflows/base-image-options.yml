@@ -1,12 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Base Image Options
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -24,13 +22,52 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+# Runs a single command using the runners shell
+   
+  Single-Command:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: echo "Hello out there!"
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+# Runs a set of commands using the runners shell
+  Multi-line:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: list the current directory contents
+      run: ls
+    
+    - name: show hte version of java
+      run: java -version
+    
+    - name: show the verison of git
+      run: git --version
+      
+    - name: show maven, gradle and ant version
+      run: |
+           mvn -version
+           echo
+           gradle -version
+           echo
+           ant -version
+    
+    - name: show the installed root drectory of android_sdk
+      run: echo $ANDROID_SDK_ROOT
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    - name: show the directory of selenium_jars path
+      run: echo $SELENIUM_JARS_PATH
+
+    - name: show who i am
+      run: whoami
+    
+    - name: show the runner workspace location
+      run: echo $RUNNER_WORKSPACE
+  
+    - name: who how the disc is laid out
+      run: df
+
+    - name: show all of the enviornment variables
+      run: env -0 | sort -z | tr '\0' '\n'
+    
