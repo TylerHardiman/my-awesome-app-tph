@@ -4,7 +4,7 @@ services:
 
   web:
     container_name: my-awesome-app-tph
-    image: 55e02b60b3fe:latest
+    image: c0f11a3adb84:latest
     ports:
       - '8080:80'
     volumes:
