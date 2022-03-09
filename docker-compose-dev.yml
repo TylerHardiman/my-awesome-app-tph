@@ -4,7 +4,7 @@ services:
 
   my-awesome-app-tph:
     container_name: my-awesome-app-tph
-    image: 55e02b60b3fe
+    image: 
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -16,7 +16,7 @@ services:
 
   my-awesome-app-tph-test:
     container_name: my-awesome-app-tph-test
-    image: 
+    image: latest
     volumes:
      - .:/app
      - '/app/node_modules'
