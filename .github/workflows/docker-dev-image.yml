@@ -1,0 +1,27 @@
+name: Docker Dev Image CI
+
+env:
+  DATE_STAMP: ${date +%s}
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+     - uses: actions/checkout@v2
+
+     - name: Run Docker compose on Dev files
+       run: docker-compose -f "docker-compose-dev.yml" up -d --build test
+     
+     - name: Env variables
+       run: echo "date-stamp=${{env.DATE_STAMP}}" >> $GITHUB
+       
+     - name: Build the Docker image
+       run: docker build . --file Dockerfile  --tag tylerhardiman/my-awesome-app-bwk:latest
