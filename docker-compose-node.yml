@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   web:
-    container_name: my-awesome-app-tph_my-awesome-app-tph
+    container_name: my-awesome-app-tph
     image: latest
     ports:
       - '80:8080'

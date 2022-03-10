@@ -1,7 +1,7 @@
 name: Deploy Node on AWS 
 
 env:
-  APP_NAME: Myawesomenewapptph
+  APP_NAME: my-awesome-app-tph
   AWS_REGION: us-east-1
   AWS_PLATFORM: Docker
   PIPELINE_ID: $GITHUB_RUN_ID-$GITHUB_RUN_NUMBER
